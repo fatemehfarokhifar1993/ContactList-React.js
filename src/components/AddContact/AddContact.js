@@ -10,6 +10,7 @@ const AddContact = ({ addContactHandler }) => {
     addContactHandler(contact);
     setContact({name:"",email:""})
   };
+ 
   return (
     <form onSubmit={submitForm}>
       <div className="formControl">

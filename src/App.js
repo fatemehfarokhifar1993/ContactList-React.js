@@ -7,11 +7,15 @@ const App = () => {
   const addContactHandler = (contact) => {
     setContacts([...contacts, { ...contact, id: Date.now() }]);
   };
+  const deleteContactHandler=(id)=>{
+     const filteredContacts=contacts.filter((contact)=>contact.id !==id)
+     setContacts(filteredContacts) 
+  }
   return (
     <main className="App">
       <h2>contact app</h2>
       <AddContact addContactHandler={addContactHandler} />
-      <ContactList />
+      <ContactList contacts={contacts} onDelete={deleteContactHandler}/>
     </main>
   );
 };
