@@ -6,11 +6,15 @@ const AddContact = ({ addContactHandler }) => {
     setContact({ ...contact, [e.target.name]: e.target.value });
   };
   const submitForm = (e) => {
+    if (!contact.name || !contact.email) {
+      alert("all fildes are mandatory !");
+      return;
+    }
     e.preventDefault();
     addContactHandler(contact);
-    setContact({name:"",email:""})
+    setContact({ name: "", email: "" });
   };
- 
+
   return (
     <form onSubmit={submitForm}>
       <div className="formControl">

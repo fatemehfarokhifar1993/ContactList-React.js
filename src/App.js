@@ -14,8 +14,10 @@ const App = () => {
   return (
     <main className="App">
       <h2>contact app</h2>
+      <div className="container">
       <AddContact addContactHandler={addContactHandler} />
       <ContactList contacts={contacts} onDelete={deleteContactHandler}/>
+      </div>
     </main>
   );
 };
