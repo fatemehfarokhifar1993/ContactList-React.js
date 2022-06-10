@@ -12,7 +12,7 @@ const AddContact = ({ addContactHandler }) => {
     }
     e.preventDefault();
     addContactHandler(contact);
-    setContact({ name: "", email: "" });
+   setContact({ name: "", email: "" });
   };
 
   return (
